@@ -11,6 +11,7 @@
           "DTAConfig": "1.0.0",
           "DiscordRichPresence": "1.2.1.24",
           "Microsoft.Extensions.Hosting": "8.0.0",
+          "Microsoft.Windows.CsWin32": "0.3.49-beta",
           "OpenMcdf": "2.3.0",
           "System.DirectoryServices": "8.0.0",
           "System.Management": "8.0.0",
@@ -445,6 +446,22 @@
           "System.Security.Principal.Windows": "4.5.0"
         }
       },
+      "Microsoft.Windows.CsWin32/0.3.49-beta": {
+        "dependencies": {
+          "Microsoft.Windows.SDK.Win32Docs": "0.1.42-alpha",
+          "Microsoft.Windows.SDK.Win32Metadata": "55.0.45-preview",
+          "Microsoft.Windows.WDK.Win32Metadata": "0.9.9-experimental",
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        }
+      },
+      "Microsoft.Windows.SDK.Win32Docs/0.1.42-alpha": {},
+      "Microsoft.Windows.SDK.Win32Metadata/55.0.45-preview": {},
+      "Microsoft.Windows.WDK.Win32Metadata/0.9.9-experimental": {
+        "dependencies": {
+          "Microsoft.Windows.SDK.Win32Metadata": "55.0.45-preview"
+        }
+      },
       "MonoGame.Framework.DesktopGL/3.8.1.303": {
         "runtime": {
           "lib/net6.0/MonoGame.Framework.dll": {
@@ -530,7 +547,7 @@
           }
         }
       },
-      "Rampastring.RS.XNAUI.WindowsGL/2.3.14": {
+      "Rampastring.RS.XNAUI.WindowsGL/2.3.15": {
         "dependencies": {
           "MonoGame.Framework.DesktopGL": "3.8.1.303",
           "Rampastring.RS.Tools": "2.0.4",
@@ -539,8 +556,8 @@
         },
         "runtime": {
           "lib/net8.0-windows7.0/Rampastring.XNAUI.WindowsGL.dll": {
-            "assemblyVersion": "2.3.14.0",
-            "fileVersion": "2.3.14.0"
+            "assemblyVersion": "2.3.15.0",
+            "fileVersion": "2.3.15.0"
           }
         }
       },
@@ -577,6 +594,7 @@
         }
       },
       "System.Memory/4.5.5": {},
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "System.Security.AccessControl/6.0.0": {},
       "System.Security.Cryptography.Pkcs/6.0.1": {
         "dependencies": {
@@ -637,7 +655,7 @@
       },
       "ClientCore/1.0.0": {
         "dependencies": {
-          "Rampastring.RS.XNAUI.WindowsGL": "2.3.14"
+          "Rampastring.RS.XNAUI.WindowsGL": "2.3.15"
         },
         "runtime": {
           "ClientCore.dll": {}
@@ -906,6 +924,34 @@
       "path": "microsoft.win32.registry/4.5.0",
       "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
     },
+    "Microsoft.Windows.CsWin32/0.3.49-beta": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/iAXplVDKESFyLz/MShuVYVx62YFvFePpq3qrzREl8KScQqG6Z2kV7r9UJTjQS1g+hfy3V+e4m1x9lsu24YNSg==",
+      "path": "microsoft.windows.cswin32/0.3.49-beta",
+      "hashPath": "microsoft.windows.cswin32.0.3.49-beta.nupkg.sha512"
+    },
+    "Microsoft.Windows.SDK.Win32Docs/0.1.42-alpha": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z/9po23gUA9aoukirh2ItMU2ZS9++Js9Gdds9fu5yuMojDrmArvY2y+tq9985tR3cxFxpZO1O35Wjfo0khj5HA==",
+      "path": "microsoft.windows.sdk.win32docs/0.1.42-alpha",
+      "hashPath": "microsoft.windows.sdk.win32docs.0.1.42-alpha.nupkg.sha512"
+    },
+    "Microsoft.Windows.SDK.Win32Metadata/55.0.45-preview": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2i1kVIk8rMuMCYtoeYeWbmCRLqNgb63Berac3Gv+J/pjp0oucopasKgLQNslryhsgBl4xex9ENhJX2MXEW5vdA==",
+      "path": "microsoft.windows.sdk.win32metadata/55.0.45-preview",
+      "hashPath": "microsoft.windows.sdk.win32metadata.55.0.45-preview.nupkg.sha512"
+    },
+    "Microsoft.Windows.WDK.Win32Metadata/0.9.9-experimental": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cncPlxLqR25mFOuvpxZPgXgJqRmXyV5eTULj/9w8AQvO/c1xJDEapohRsWkYaia7hCR/EwEzBHr7RU9u93T03w==",
+      "path": "microsoft.windows.wdk.win32metadata/0.9.9-experimental",
+      "hashPath": "microsoft.windows.wdk.win32metadata.0.9.9-experimental.nupkg.sha512"
+    },
     "MonoGame.Framework.DesktopGL/3.8.1.303": {
       "type": "package",
       "serviceable": true,
@@ -941,12 +987,12 @@
       "path": "rampastring.rs.tools/2.0.4",
       "hashPath": "rampastring.rs.tools.2.0.4.nupkg.sha512"
     },
-    "Rampastring.RS.XNAUI.WindowsGL/2.3.14": {
+    "Rampastring.RS.XNAUI.WindowsGL/2.3.15": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-RevV9OVI52RKk17SJwlp82l+iQJ+D0ymkX9W+TFR6FfBRmHSAA5KJSYgKQcU/8SjJhnkTo4conwYjFlrm88TQw==",
-      "path": "rampastring.rs.xnaui.windowsgl/2.3.14",
-      "hashPath": "rampastring.rs.xnaui.windowsgl.2.3.14.nupkg.sha512"
+      "sha512": "sha512-ksR1dl87ci0F6nm6FY/0V8ytNpJHUU/tKuayKFx6UK+HGERJRJAmQ06jQhBU5WVc/q2TO9qCM9ddvSQcu/QrbA==",
+      "path": "rampastring.rs.xnaui.windowsgl/2.3.15",
+      "hashPath": "rampastring.rs.xnaui.windowsgl.2.3.15.nupkg.sha512"
     },
     "SixLabors.ImageSharp/3.0.2": {
       "type": "package",
@@ -1003,6 +1049,13 @@
       "sha512": "sha512-XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
       "path": "system.memory/4.5.5",
       "hashPath": "system.memory.4.5.5.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
     },
     "System.Security.AccessControl/6.0.0": {
       "type": "package",
