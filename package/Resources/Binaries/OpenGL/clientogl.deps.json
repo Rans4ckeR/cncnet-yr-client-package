@@ -22,15 +22,15 @@
           "clientogl.dll": {}
         }
       },
-      "CnCNet.RS.ClientUpdater/1.0.15": {
+      "CnCNet.RS.ClientUpdater/1.0.16": {
         "dependencies": {
           "Microsoft.AspNet.WebApi.Client": "6.0.0",
           "Rampastring.RS.Tools": "2.0.4"
         },
         "runtime": {
           "lib/net8.0/ClientUpdater.dll": {
-            "assemblyVersion": "1.0.15.0",
-            "fileVersion": "1.0.15.0"
+            "assemblyVersion": "1.0.16.0",
+            "fileVersion": "1.0.16.0"
           }
         }
       },
@@ -672,7 +672,7 @@
       "DTAConfig/1.0.0": {
         "dependencies": {
           "ClientGUI": "1.0.0",
-          "CnCNet.RS.ClientUpdater": "1.0.15"
+          "CnCNet.RS.ClientUpdater": "1.0.16"
         },
         "runtime": {
           "DTAConfig.dll": {}
@@ -686,12 +686,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CnCNet.RS.ClientUpdater/1.0.15": {
+    "CnCNet.RS.ClientUpdater/1.0.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-fMpYOXbYILiDTvxBx3ZGHkHnmqyjHZd0AyqerB6cvg12f9sXO6CY+szYzUeAt5RKRWOd+hTPZdNsCnkVsd20Ng==",
-      "path": "cncnet.rs.clientupdater/1.0.15",
-      "hashPath": "cncnet.rs.clientupdater.1.0.15.nupkg.sha512"
+      "sha512": "sha512-VzRm+pxjqVYZc6ghd2dzC0qKYBwLhNGXRABkg2BNRw23bHP3cIKxqVD874RpqBrizkZrBcxZYYSRcdLP9n2gUQ==",
+      "path": "cncnet.rs.clientupdater/1.0.16",
+      "hashPath": "cncnet.rs.clientupdater.1.0.16.nupkg.sha512"
     },
     "DiscordRichPresence/1.2.1.24": {
       "type": "package",
