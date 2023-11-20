@@ -16,6 +16,12 @@ on:
   
   # Allows for this workflow to be run manually
   workflow_dispatch:
+    inputs:
+      gameversion:
+        description: 'Version'
+        required: true
+        default: ''
+        type: string
 
 jobs:
   # This job is responsible for building the package that will be deployed to the server.
@@ -31,7 +37,7 @@ jobs:
     steps:
       # Checkout the repo
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@main
         with:
           fetch-depth: 0 # required for gitversion
 
@@ -48,18 +54,20 @@ jobs:
           npm run release-tag-validator
 
       - name: Install GitVersion
-        uses: gittools/actions/gitversion/setup@v0.9.15
+        if: false
+        uses: gittools/actions/gitversion/setup@main
         with:
           versionSpec: '5.x'
 
       # Run Gitversion - https://gitversion.net/docs/
       - name: Run GitVersion
-        uses: gittools/actions/gitversion/execute@v0.9.15
+        if: false
+        uses: gittools/actions/gitversion/execute@main
 
       # Update versionconfig.ini with gitversion version info
       - name: Update versionconfig.ini
         # replace the second line in the file with the proper version number (X.Y.Z-dev.N)
-        run: sed -i "2 s/.*/${{env.GitVersion_SemVer}}/" ./package/versionconfig.ini
+        run: sed -i "2 s/.*/${{github.event.inputs.gameversion}}/" ./package/versionconfig.ini
 
       - name: Version Writer
         working-directory: tools
@@ -79,7 +87,7 @@ jobs:
 
       # Upload package archive as a workflow artifact
       - name: Upload Package Workflow Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@main
         with:
           name: package
           path: ./package.tar.gz
@@ -87,7 +95,7 @@ jobs:
 
       # Upload installer as a workflow artifact
       - name: Upload Installer Workflow Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@main
         with:
           name: installer
           path: ./CnCNet5_YR_Installer.exe
@@ -98,26 +106,26 @@ jobs:
       - name: Upload Package Release Asset (tar)
         if: github.event_name == 'release'
         working-directory: tools
-        run: npm run release-asset-uploader -- --token ${{ secrets.GITHUB_TOKEN }} --assetName "package_${{env.GitVersion_SemVer}} (tar)" --assetPath ../package.tar.gz
+        run: npm run release-asset-uploader -- --token ${{ secrets.GITHUB_TOKEN }} --assetName "package_${{github.event.inputs.gameversion}} (tar)" --assetPath ../package.tar.gz
 
       # Upload package archive (zip) to any relevant releases for current tag
       # If there is no release/tag, this will not do anything
       - name: Upload Package Release Asset (zip)
         if: github.event_name == 'release'
         working-directory: tools
-        run: npm run release-asset-uploader -- --token ${{ secrets.GITHUB_TOKEN }} --assetName "package_${{env.GitVersion_SemVer}} (zip)" --assetPath ../package.zip
+        run: npm run release-asset-uploader -- --token ${{ secrets.GITHUB_TOKEN }} --assetName "package_${{github.event.inputs.gameversion}} (zip)" --assetPath ../package.zip
         
       # Upload installer to any relevant releases for current tag
       # If there is no release/tag, this will not do anything
       - name: Upload Installer Release Asset
         if: github.event_name == 'release'
         working-directory: tools
-        run: npm run release-asset-uploader -- --token ${{ secrets.GITHUB_TOKEN }} --assetName "CnCNet5_YR_Installer_${{env.GitVersion_SemVer}} (exe)" --assetPath ../CnCNet5_YR_Installer.exe
+        run: npm run release-asset-uploader -- --token ${{ secrets.GITHUB_TOKEN }} --assetName "CnCNet5_YR_Installer_${{github.event.inputs.gameversion}} (exe)" --assetPath ../CnCNet5_YR_Installer.exe
 
   # This job downloads the package artifact from the previous job and deploys it to the server.
   deploy-package:
     # if previous job was successful
-    if: ${{ success() }}
+    if: false
     runs-on: ubuntu-latest
     environment: cncnet
     needs: build-package
@@ -125,7 +133,7 @@ jobs:
     steps:
       # Download the package artifact from previous job
       - name: Get artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@main
         with:
           name: package
 
@@ -144,7 +152,7 @@ jobs:
 
       # Extract the deployed package on the server
       - name: Extract the deployed package
-        uses: appleboy/ssh-action@v0.1.7
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
@@ -163,7 +171,7 @@ jobs:
       # Then, client users can use the path "/updates/games/yr/develop/" for their UpdaterConfig.ini file.
       # This will keep develop and feature branch update mirror links up to date as soon as the deploy has occurred.
       - name: Update mirror link
-        uses: appleboy/ssh-action@v0.1.7
+        uses: appleboy/ssh-action@master
         # RUN ON NON-RELEASES ONLY. RELEASE VERSION LINKS SHOULD CONTINUE TO BE UPDATED MANUALLY, FOR NOW.
         if: github.event_name != 'release'
         with:
@@ -175,6 +183,3 @@ jobs:
           script: |
             cd ${{ secrets.SSH_PATH_GAMES_YR }}
             ln -sfn updates/${{ needs.build-package.outputs.packageUploadVersion }} ${{ needs.build-package.outputs.mirrorLinkName }}
-        
-
-
