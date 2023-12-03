@@ -422,3 +422,4 @@ version_u
 /Client/
 
 !/live/**
+/live/net8.0/web.config
