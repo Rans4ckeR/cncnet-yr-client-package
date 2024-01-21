@@ -15,22 +15,22 @@
           "OpenMcdf": "2.3.0",
           "System.DirectoryServices": "8.0.0",
           "System.Management": "8.0.0",
-          "System.ServiceModel.Http": "6.2.0",
+          "System.ServiceModel.Http": "8.0.0",
           "lzo.net": "0.0.6"
         },
         "runtime": {
           "clientdx.dll": {}
         }
       },
-      "CnCNet.RS.ClientUpdater/1.0.17": {
+      "CnCNet.RS.ClientUpdater/1.0.20": {
         "dependencies": {
           "Microsoft.AspNet.WebApi.Client": "6.0.0",
-          "Rampastring.RS.Tools": "2.0.4"
+          "Rampastring.RS.Tools": "2.0.6"
         },
         "runtime": {
           "lib/net8.0/ClientUpdater.dll": {
-            "assemblyVersion": "1.0.17.0",
-            "fileVersion": "1.0.17.0"
+            "assemblyVersion": "1.0.20.0",
+            "fileVersion": "1.0.20.0"
           }
         }
       },
@@ -788,25 +788,25 @@
           }
         }
       },
-      "Rampastring.RS.Tools/2.0.4": {
+      "Rampastring.RS.Tools/2.0.6": {
         "runtime": {
           "lib/net8.0/Rampastring.Tools.dll": {
-            "assemblyVersion": "2.0.4.0",
-            "fileVersion": "2.0.4.0"
+            "assemblyVersion": "2.0.6.0",
+            "fileVersion": "2.0.6.0"
           }
         }
       },
-      "Rampastring.RS.XNAUI.WindowsDX/2.3.17": {
+      "Rampastring.RS.XNAUI.WindowsDX/2.3.19": {
         "dependencies": {
           "MonoGame.Framework.WindowsDX": "3.8.1.303",
-          "Rampastring.RS.Tools": "2.0.4",
-          "SixLabors.ImageSharp": "3.0.2",
+          "Rampastring.RS.Tools": "2.0.6",
+          "SixLabors.ImageSharp": "3.1.2",
           "TextCopy": "6.2.1"
         },
         "runtime": {
           "lib/net8.0-windows7.0/Rampastring.XNAUI.WindowsDX.dll": {
-            "assemblyVersion": "2.3.17.0",
-            "fileVersion": "2.3.17.0"
+            "assemblyVersion": "2.3.19.0",
+            "fileVersion": "2.3.19.0"
           }
         }
       },
@@ -952,11 +952,11 @@
           }
         }
       },
-      "SixLabors.ImageSharp/3.0.2": {
+      "SixLabors.ImageSharp/3.1.2": {
         "runtime": {
           "lib/net6.0/SixLabors.ImageSharp.dll": {
             "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.2.0"
+            "fileVersion": "3.1.2.0"
           }
         }
       },
@@ -974,7 +974,14 @@
           "System.Threading": "4.0.11"
         }
       },
-      "System.CodeDom/8.0.0": {},
+      "System.CodeDom/8.0.0": {
+        "runtime": {
+          "lib/net8.0/System.CodeDom.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
       "System.Collections/4.0.11": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
@@ -1045,7 +1052,22 @@
         }
       },
       "System.Diagnostics.DiagnosticSource/8.0.0": {},
-      "System.Diagnostics.EventLog/8.0.0": {},
+      "System.Diagnostics.EventLog/8.0.0": {
+        "runtime": {
+          "lib/net8.0/System.Diagnostics.EventLog.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
       "System.Diagnostics.FileVersionInfo/4.0.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
@@ -1108,7 +1130,22 @@
           "System.Runtime": "4.1.0"
         }
       },
-      "System.DirectoryServices/8.0.0": {},
+      "System.DirectoryServices/8.0.0": {
+        "runtime": {
+          "lib/net8.0/System.DirectoryServices.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/System.DirectoryServices.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
       "System.Dynamic.Runtime/4.0.11": {
         "dependencies": {
           "System.Collections": "4.0.11",
@@ -1792,26 +1829,26 @@
           "Microsoft.NETCore.Platforms": "2.0.0"
         }
       },
-      "System.ServiceModel.Http/6.2.0": {
+      "System.ServiceModel.Http/8.0.0": {
         "dependencies": {
-          "System.ServiceModel.Primitives": "6.2.0"
+          "System.ServiceModel.Primitives": "8.0.0"
         },
         "runtime": {
-          "lib/net6.0/System.ServiceModel.Http.dll": {
-            "assemblyVersion": "6.2.0.0",
-            "fileVersion": "6.200.23.55602"
+          "lib/net8.0/System.ServiceModel.Http.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.60704"
           }
         }
       },
-      "System.ServiceModel.Primitives/6.2.0": {
+      "System.ServiceModel.Primitives/8.0.0": {
         "dependencies": {
           "Microsoft.Extensions.ObjectPool": "6.0.16",
           "System.Security.Cryptography.Xml": "6.0.1"
         },
         "runtime": {
-          "lib/net6.0/System.ServiceModel.Primitives.dll": {
-            "assemblyVersion": "6.2.0.0",
-            "fileVersion": "6.200.23.55602"
+          "lib/net8.0/System.ServiceModel.Primitives.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.60704"
           }
         }
       },
@@ -2017,7 +2054,7 @@
       },
       "ClientCore/1.0.0": {
         "dependencies": {
-          "Rampastring.RS.XNAUI.WindowsDX": "2.3.17"
+          "Rampastring.RS.XNAUI.WindowsDX": "2.3.19"
         },
         "runtime": {
           "ClientCore.dll": {}
@@ -2034,7 +2071,7 @@
       "DTAConfig/1.0.0": {
         "dependencies": {
           "ClientGUI": "1.0.0",
-          "CnCNet.RS.ClientUpdater": "1.0.17"
+          "CnCNet.RS.ClientUpdater": "1.0.20"
         },
         "runtime": {
           "DTAConfig.dll": {}
@@ -2048,12 +2085,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CnCNet.RS.ClientUpdater/1.0.17": {
+    "CnCNet.RS.ClientUpdater/1.0.20": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-v2m/4d5FEHn6MGUYJDWx8AD/xTp8rM6HbeQFgpAjjYJjT0ncTMx3xFLwWo8Z1NPdSGtsJlkjl4GixncF5qc7tA==",
-      "path": "cncnet.rs.clientupdater/1.0.17",
-      "hashPath": "cncnet.rs.clientupdater.1.0.17.nupkg.sha512"
+      "sha512": "sha512-X3B3l4RoOMMGRKI39chMXc1/M+p9nEUrRBdP0HYDAaqBbyTHXz7wAi3wQPOuuPz9wVN9PlF18fawJClef/uyng==",
+      "path": "cncnet.rs.clientupdater/1.0.20",
+      "hashPath": "cncnet.rs.clientupdater.1.0.20.nupkg.sha512"
     },
     "DiscordRichPresence/1.2.1.24": {
       "type": "package",
@@ -2461,19 +2498,19 @@
       "path": "openmcdf/2.3.0",
       "hashPath": "openmcdf.2.3.0.nupkg.sha512"
     },
-    "Rampastring.RS.Tools/2.0.4": {
+    "Rampastring.RS.Tools/2.0.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-CS+bMdPVGxjMEQyDFwdDRnpoLSR3R8Fb1KF7icGEAX9MkqhfufVAIcQhTp0DNx6GhXV724f+gQj5MimcO13QuA==",
-      "path": "rampastring.rs.tools/2.0.4",
-      "hashPath": "rampastring.rs.tools.2.0.4.nupkg.sha512"
+      "sha512": "sha512-pQrkmpibXfYwfsBqihF3JhFyN53laC4hadTt6JGkSQGU+DEAvkLjWOQ2v0ABLGwPpK3icLvKWrU6SOXBKNR+rA==",
+      "path": "rampastring.rs.tools/2.0.6",
+      "hashPath": "rampastring.rs.tools.2.0.6.nupkg.sha512"
     },
-    "Rampastring.RS.XNAUI.WindowsDX/2.3.17": {
+    "Rampastring.RS.XNAUI.WindowsDX/2.3.19": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-fFmUPF72ZDyf/MQMgnfQZXjUnrMioDX7Dlr7cgpm2gRWGdHRJ4xqXJxW0b5CnFXdZJfwwLzkA4epDf0j63lUTg==",
-      "path": "rampastring.rs.xnaui.windowsdx/2.3.17",
-      "hashPath": "rampastring.rs.xnaui.windowsdx.2.3.17.nupkg.sha512"
+      "sha512": "sha512-78KIo2AWyPj4dMXtj0BHlg3y1Ya18k1+PlNbb70vUfjHugbyfD0MZepeIVXCi1gy2AI+GG6Hbb58Ur3U5WJoRA==",
+      "path": "rampastring.rs.xnaui.windowsdx/2.3.19",
+      "hashPath": "rampastring.rs.xnaui.windowsdx.2.3.19.nupkg.sha512"
     },
     "runtime.native.System/4.0.0": {
       "type": "package",
@@ -2573,12 +2610,12 @@
       "path": "sharpdx.xinput/4.0.1",
       "hashPath": "sharpdx.xinput.4.0.1.nupkg.sha512"
     },
-    "SixLabors.ImageSharp/3.0.2": {
+    "SixLabors.ImageSharp/3.1.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-PlwUHnLZ67G1i0xXDYQJYbFiJsvXiEFWtKdV0QvY9j+dFasYbl+vWXXY42/asTsNjchsH5BLuoRzlf8Fa8lzpg==",
-      "path": "sixlabors.imagesharp/3.0.2",
-      "hashPath": "sixlabors.imagesharp.3.0.2.nupkg.sha512"
+      "sha512": "sha512-PYdR6GUI+gW6LBaAQKTik0Ai8oLpFAz3a/KrVusxoTg3kf7F3cuIqKMhJGsuQcmDHCF+iD81Pyn4cexyHrb1ZA==",
+      "path": "sixlabors.imagesharp/3.1.2",
+      "hashPath": "sixlabors.imagesharp.3.1.2.nupkg.sha512"
     },
     "System.AppContext/4.1.0": {
       "type": "package",
@@ -3126,19 +3163,19 @@
       "path": "system.security.principal.windows/4.5.0",
       "hashPath": "system.security.principal.windows.4.5.0.nupkg.sha512"
     },
-    "System.ServiceModel.Http/6.2.0": {
+    "System.ServiceModel.Http/8.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-lMk8MEw1OCvyyKY4HMg4ro1eYtWY7azIoDc2FBEGP8uOTJouWn3DemOQvM/GUpgrFbkpjuHPbEG5hgUbNtpiYA==",
-      "path": "system.servicemodel.http/6.2.0",
-      "hashPath": "system.servicemodel.http.6.2.0.nupkg.sha512"
+      "sha512": "sha512-Qwkoe0F+2e/2LiNwiIgfBTJTw11flv208UwS38ru+GR7nZk2VdGvAE8tqGB0RQIGra73Rux9jKNgfy1XtfXdLg==",
+      "path": "system.servicemodel.http/8.0.0",
+      "hashPath": "system.servicemodel.http.8.0.0.nupkg.sha512"
     },
-    "System.ServiceModel.Primitives/6.2.0": {
+    "System.ServiceModel.Primitives/8.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ro+c4JKNuX6dDpTWh9ZICYr4pIe7uJToauPPgZt2qqFPjVB78ZDUz3rPCZX89dA+IoRZ+9T1ngLBKsgkTmx7UA==",
-      "path": "system.servicemodel.primitives/6.2.0",
-      "hashPath": "system.servicemodel.primitives.6.2.0.nupkg.sha512"
+      "sha512": "sha512-hVzK77Bl00H+1V7ho7h03tKlgxAIKssV3eUnRdH+gTCZCK4Ywnv2CR35AV9ly/tRpvsGwNL1d/jkAwB1MWw3Fw==",
+      "path": "system.servicemodel.primitives/8.0.0",
+      "hashPath": "system.servicemodel.primitives.8.0.0.nupkg.sha512"
     },
     "System.Text.Encoding/4.0.11": {
       "type": "package",
