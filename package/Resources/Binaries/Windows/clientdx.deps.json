@@ -22,15 +22,15 @@
           "clientdx.dll": {}
         }
       },
-      "CnCNet.RS.ClientUpdater/1.0.20": {
+      "CnCNet.RS.ClientUpdater/1.0.21": {
         "dependencies": {
           "Microsoft.AspNet.WebApi.Client": "6.0.0",
           "Rampastring.RS.Tools": "2.0.6"
         },
         "runtime": {
           "lib/net8.0/ClientUpdater.dll": {
-            "assemblyVersion": "1.0.20.0",
-            "fileVersion": "1.0.20.0"
+            "assemblyVersion": "1.0.21.0",
+            "fileVersion": "1.0.21.0"
           }
         }
       },
@@ -796,7 +796,7 @@
           }
         }
       },
-      "Rampastring.RS.XNAUI.WindowsDX/2.3.19": {
+      "Rampastring.RS.XNAUI.WindowsDX/2.3.20": {
         "dependencies": {
           "MonoGame.Framework.WindowsDX": "3.8.1.303",
           "Rampastring.RS.Tools": "2.0.6",
@@ -805,8 +805,8 @@
         },
         "runtime": {
           "lib/net8.0-windows7.0/Rampastring.XNAUI.WindowsDX.dll": {
-            "assemblyVersion": "2.3.19.0",
-            "fileVersion": "2.3.19.0"
+            "assemblyVersion": "2.3.20.0",
+            "fileVersion": "2.3.20.0"
           }
         }
       },
@@ -2054,7 +2054,7 @@
       },
       "ClientCore/1.0.0": {
         "dependencies": {
-          "Rampastring.RS.XNAUI.WindowsDX": "2.3.19"
+          "Rampastring.RS.XNAUI.WindowsDX": "2.3.20"
         },
         "runtime": {
           "ClientCore.dll": {}
@@ -2071,7 +2071,7 @@
       "DTAConfig/1.0.0": {
         "dependencies": {
           "ClientGUI": "1.0.0",
-          "CnCNet.RS.ClientUpdater": "1.0.20"
+          "CnCNet.RS.ClientUpdater": "1.0.21"
         },
         "runtime": {
           "DTAConfig.dll": {}
@@ -2085,12 +2085,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CnCNet.RS.ClientUpdater/1.0.20": {
+    "CnCNet.RS.ClientUpdater/1.0.21": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-X3B3l4RoOMMGRKI39chMXc1/M+p9nEUrRBdP0HYDAaqBbyTHXz7wAi3wQPOuuPz9wVN9PlF18fawJClef/uyng==",
-      "path": "cncnet.rs.clientupdater/1.0.20",
-      "hashPath": "cncnet.rs.clientupdater.1.0.20.nupkg.sha512"
+      "sha512": "sha512-EamVaVUWluzXal6IGYeoXFthkexkLpGI/ULIYvPfY18zmEn021/tYGcXY4zbtBhWle7JBK+/fvbYuok09LfRgg==",
+      "path": "cncnet.rs.clientupdater/1.0.21",
+      "hashPath": "cncnet.rs.clientupdater.1.0.21.nupkg.sha512"
     },
     "DiscordRichPresence/1.2.1.24": {
       "type": "package",
@@ -2505,12 +2505,12 @@
       "path": "rampastring.rs.tools/2.0.6",
       "hashPath": "rampastring.rs.tools.2.0.6.nupkg.sha512"
     },
-    "Rampastring.RS.XNAUI.WindowsDX/2.3.19": {
+    "Rampastring.RS.XNAUI.WindowsDX/2.3.20": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-78KIo2AWyPj4dMXtj0BHlg3y1Ya18k1+PlNbb70vUfjHugbyfD0MZepeIVXCi1gy2AI+GG6Hbb58Ur3U5WJoRA==",
-      "path": "rampastring.rs.xnaui.windowsdx/2.3.19",
-      "hashPath": "rampastring.rs.xnaui.windowsdx.2.3.19.nupkg.sha512"
+      "sha512": "sha512-cdoLeVBu95xUhcZwEtWVp6Ii/PgBcDr6PYTa7bm3iUlZs0hqCGdh3vq8MNgYERjgnZdcgknDntm49EkNfFoQWg==",
+      "path": "rampastring.rs.xnaui.windowsdx/2.3.20",
+      "hashPath": "rampastring.rs.xnaui.windowsdx.2.3.20.nupkg.sha512"
     },
     "runtime.native.System/4.0.0": {
       "type": "package",
